@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30503.244
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Internet-Banking-RESTful-service", "Internet-Banking-RESTful-service.csproj", "{8872327F-BEA0-48FC-8E84-B25A4AD149E1}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8872327F-BEA0-48FC-8E84-B25A4AD149E1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8872327F-BEA0-48FC-8E84-B25A4AD149E1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8872327F-BEA0-48FC-8E84-B25A4AD149E1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8872327F-BEA0-48FC-8E84-B25A4AD149E1}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {07B520C0-6837-46CB-9259-70166BC5FEF0}
+	EndGlobalSection
+EndGlobal
