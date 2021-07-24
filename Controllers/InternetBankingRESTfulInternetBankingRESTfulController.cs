@@ -16,24 +16,24 @@ namespace Internet_Banking_RESTful_service.Controllers
         [HttpGet]
         [Route("bank/api/calc/MD5/{input}")]
         [Route("bank/api/calc/{input}/MD5")]
-        public string CalculateMD5(string input)
+        public ActionResult CalculateMD5(string input)
         {
 
-            return Helpers.CreateMD5(input);
+            return Ok(new { result  = Helpers.CreateMD5(input) });
         }
 
         [HttpGet]
         [Route("bank/api/version")]
         [Route("bank/api-version")]
-        public string GetApiVersion()
+        public ActionResult GetApiVersion()
         {
-            return string.Format("{0}.1.0", DateTime.UtcNow.ToString("yyyy.MM.dd"));
+            return Ok(new { result = string.Format("{0}.1.0", DateTime.UtcNow.ToString("yyyy.MM.dd") ) } );
         }
 
         [HttpGet]
         [Route(" bank/api/password/strong/{input}")]
         [Route(" bank/api/is-password-strong/{input}")]
-        public bool IsPasswordStrong(string password)
+        public ActionResult IsPasswordStrong(string password)
         {
             throw new NotImplementedException();
         }
