@@ -25,5 +25,43 @@ namespace Internet_Banking_RESTful_service
                 return sb.ToString();
             }
         }
+
+        public static bool IsPasswordStrong(string password)
+        {
+            password = password.Trim();
+
+            if (password.Length < 8)
+                return false;
+
+            if (!StrongEnough(password))
+                return false;
+
+            return true;
+        }
+
+        private static bool StrongEnough(string password)
+        {
+            bool hasUpperCase = false;
+            bool hasLowerCase = false;
+            bool hasDigit = false;
+            bool hasSpecialCharacters = false;
+            foreach (char c in password)
+            {
+
+                if (Char.IsWhiteSpace(c))
+                    return false;
+                if (Char.IsUpper(c))
+                    hasUpperCase = true;
+                if (Char.IsLower(c))
+                    hasLowerCase = true;
+                if (Char.IsDigit(c))
+                    hasDigit = true;
+                if (!Char.IsLetterOrDigit(c))
+                    hasSpecialCharacters = true;              
+
+            }
+
+            return hasSpecialCharacters && hasUpperCase && hasLowerCase && hasDigit;
+        }
     }
 }

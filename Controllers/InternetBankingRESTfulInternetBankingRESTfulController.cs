@@ -31,11 +31,11 @@ namespace Internet_Banking_RESTful_service.Controllers
         }
 
         [HttpGet]
-        [Route(" bank/api/password/strong/{input}")]
-        [Route(" bank/api/is-password-strong/{input}")]
+        [Route("bank/api/password/strong/{password}")]
+        [Route("bank/api/is-password-strong/{password}")]
         public ActionResult IsPasswordStrong(string password)
         {
-            throw new NotImplementedException();
+            return Ok(new { result = Helpers.IsPasswordStrong(password) });
         }
 
 
